@@ -5,13 +5,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-rmq_host = os.getenv('HOST')
-rmq_port = os.getenv('PORT')
+rmq_host = os.getenv('HOST_RMQ')
+rmq_port = os.getenv('PORT_RMQ')
 rmq_user = os.getenv('USER')
 rmq_password = os.getenv('PASSWORD')
 rmq_queue = os.getenv('QUEUE')
 
-time.sleep(20)
+time.sleep(30)
 connection = pika.BlockingConnection(pika.ConnectionParameters(host=rmq_host, 
                                                                 port=int(rmq_port),
                                                                 credentials= pika.PlainCredentials(username=rmq_user,password=rmq_password)))
@@ -34,8 +34,8 @@ def on_request(ch, method, props, body):
 def buscar_archivo(filename):
     for root, dirs, files in os.walk(os.getcwd()):
         if filename in files:
-            return f"El archivo {filename} se encuentra en el microservicio."
-    return f"No se ha encontrado el archivo {filename} en el microservicio."
+            return f"El archivo {filename} si se encuentra disponible."
+    return f"No se ha encontrado el archivo {filename} disponible."
     
 
 channel.basic_qos(prefetch_count=1)

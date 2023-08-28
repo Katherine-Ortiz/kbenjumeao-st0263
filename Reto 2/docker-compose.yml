@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  app-flask:
+    build:
+      context: ./Gateway
+    command: python ./src/app.py
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./Gateway/.env
+    volumes:
+      - ./Gateway:/app
+    networks:
+      - mynetwork
+    depends_on:
+      - rabbitmq
+      - grpc
+
+  servidor-grpc:
+    build:
+      context: ./grpc
+    env_file:
+      - ./grpc/.env
+    volumes:
+      - ./grpc:/app
+    networks:
+      - mynetwork
+    expose:
+      - 50051
+    ports:
+      - "50051:50051"
+
+  MOM:
+    build:
+      context: ./MOM
+    command: python ./src/consumerRMQ.py
+    env_file:
+      - ./MOM/.env
+    volumes:
+      - ./MOM:/app
+    networks:
+      - mynetwork
+    depends_on:
+      - Gateway
+      - rabbitmq
+
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    expose:
+      - 5672
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+    - ./config-RMQ/config.json:/etc/rabbitmq/definitions.json
+    networks:
+      - mynetwork
+
+networks:
+  reto-2:

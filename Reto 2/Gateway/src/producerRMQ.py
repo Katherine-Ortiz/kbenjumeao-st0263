@@ -3,6 +3,8 @@ import pika
 import uuid
 from dotenv import load_dotenv
 
+load_dotenv()
+
 rmq_host = os.getenv('HOST_RMQ')
 rmq_port = os.getenv('PORT_RMQ')
 rmq_user = os.getenv('USER')

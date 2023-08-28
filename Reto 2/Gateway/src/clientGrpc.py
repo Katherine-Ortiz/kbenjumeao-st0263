@@ -2,6 +2,9 @@ import os
 import grpc
 import files_pb2
 import files_pb2_grpc
+from dotenv import load_dotenv
+
+load_dotenv()
 
 SERVER_ADDRESS = os.getenv("HOST_GRPC")
 SERVER_PORT = os.getenv("PORT_GRPC")
