@@ -72,7 +72,7 @@ Cada microservicio cuenta con su archivo .env donde se encuentra la configuraci�
 
 ## opcional - detalles de la organización del código por carpetas o descripción de algún archivo. (ESTRUCTURA DE DIRECTORIOS Y ARCHIVOS IMPORTANTE DEL PROYECTO, comando 'tree' de linux)
 
-![](./imagenes/arbol.png)
+![](./imagenes/arbol.jpg)
 
 # referencias:
 
