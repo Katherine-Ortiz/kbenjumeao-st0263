@@ -66,3 +66,18 @@ Dotenv se usó para asignar variables a valores y que no sean vistos estos valor
 
 ![](./imagenes/listar.jpg)
 
+## descripción y como se configura los parámetros del proyecto (ej: ip, puertos, conexión a bases de datos, variables de ambiente, parámetros, etc)
+
+Cada microservicio cuenta con su archivo .env donde se encuentra la configuración de estos mismos.
+
+## opcional - detalles de la organización del código por carpetas o descripción de algún archivo. (ESTRUCTURA DE DIRECTORIOS Y ARCHIVOS IMPORTANTE DEL PROYECTO, comando 'tree' de linux)
+
+![](./imagenes/arbol.png)
+
+# referencias:
+
+- https://www.rabbitmq.com/documentation.html 
+- https://www.topcoder.com/thrive/articles/build-microservice-architecture-msa-rest-api-using-the-using-flask
+- https://grpc.io/docs/languages/python/quickstart/
+- https://github.com/st0263eafit/st0263-232/tree/main/Laboratorio-RPC
+
