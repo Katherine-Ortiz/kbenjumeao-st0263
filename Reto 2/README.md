@@ -39,13 +39,17 @@ En la arquitectura del proyecto se observan 2 componentes en el desarrollo de es
 
 En el proyecto un cliente puede hacer una petición mediante su navegador web, o mediante desde Postman. Éste se comunica mediante el API Rest. El API Gateway a su vez se comunica mediante gRPC con el primer microservicio, el cual tiene la función de listar los archivos disponibles. El microservicio de buscar un archivo se buscó ser implementado con MOM a través de RabbitMQ. Luego de varias pruebas no se logra establecer comunicación. Se crea la cola en la interfaz al ejecutar y correr el consumidor, pero no logra entrar el query enviado. 
 
-![](Reto2/imagenes/rabbit.jpg)
+![](./imagenes/rabbit.jpg)
 
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
 Todos los servicios fueron implementados con Python 3.11.4.
 
     Flask==2.3.3
-
+    grpcio==1.57.0
+    grpcio-tools==1.57.0
+    pika==1.3.2
+    protobuf==4.24.1
+    python-dotenv==1.0.0
 
 
