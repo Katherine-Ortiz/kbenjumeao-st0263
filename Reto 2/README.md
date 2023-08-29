@@ -44,6 +44,11 @@ En el proyecto un cliente puede hacer una petición mediante su navegador web, o
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
 Todos los servicios fueron implementados con Python 3.11.4.
+Flask se utilizó para implementar la puerta de enlace API.
+Grpcio es una biblioteca del kit de herramientas gRPC para implementar el microservicio 1 de listar los archivos.
+Pika es la biblioteca de cliente RabbitMQ para el intento de implementación del microservicio 2.
+Protobuf se usó para almacenar los datos estructurados y para la comunicacion de c/s describiendo la interfaz.
+Dotenv se usó para asignar variables a valores y que no sean vistos estos valores. 
 
     Flask==2.3.3
     grpcio==1.57.0
@@ -52,4 +57,12 @@ Todos los servicios fueron implementados con Python 3.11.4.
     protobuf==4.24.1
     python-dotenv==1.0.0
 
+## como se compila y ejecuta.
+
+- Se debe correr primero el servidor, para esto se ingresa a la siguiente ruta: Reto2/Grpc/src y se ejecuta el comando python server.py
+- Luego se debe correr el api, para esto se ingresa a la siguiente ruta: Reto2/Gateway/src y se ejecuta el comando python app.py
+- Por último se accede a la dirección http://127.0.0.1:5000/files
+- Así el cliente puede observar la lista de archivos. En postman funciona de la misma manera y al ejecutar se obtiene lo siguiente: 
+
+![](./imagenes/listar.jpg)
 
