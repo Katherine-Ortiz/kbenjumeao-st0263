@@ -1,4 +1,4 @@
-# ST02363 Tópicos Especiales en Telemática
+# ST0263 Tópicos Especiales en Telemática
 
 # Estudiante: Katherine Benjumea Ortiz, kbenjumeao@eafit.edu.co
 
