@@ -12,7 +12,7 @@ rmq_password = os.getenv('PASSWORD')
 rmq_queue = os.getenv('QUEUE')
 
 class ArchivoMOM:
-    
+
     def __init__(self):
         self.connection =  pika.BlockingConnection(pika.ConnectionParameters(host=rmq_host, 
                                                                 port=int(rmq_port),
@@ -44,4 +44,3 @@ class ArchivoMOM:
         while self.response is None:
             self.connection.process_data_events()
         return self.response.decode()
-

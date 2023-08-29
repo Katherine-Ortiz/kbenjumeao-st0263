@@ -37,7 +37,6 @@ def buscar_archivo(filename):
             return f"El archivo {filename} si se encuentra disponible."
     return f"No se ha encontrado el archivo {filename} disponible."
     
-
 channel.basic_qos(prefetch_count=1)
 channel.basic_consume(queue=rmq_queue, on_message_callback=on_request)
 

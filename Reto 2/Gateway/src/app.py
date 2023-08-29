@@ -17,7 +17,6 @@ rmq_user = os.getenv('USER')
 rmq_password = os.getenv('PASSWORD')
 grpc_port = os.getenv("PORT_GRPC")
 
-
 @app.route('/search-files')
 def search_files():
     query = request.args.get('query')
@@ -29,7 +28,6 @@ def search_files():
         mimetype='application/json'
     )
     return response
-
 
 @app.route("/files")
 def list_files():
