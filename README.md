@@ -39,8 +39,7 @@ En la arquitectura del proyecto se observan 2 componentes en el desarrollo de es
 
 En el proyecto un cliente puede hacer una petición mediante su navegador web, o mediante desde Postman. Éste se comunica mediante el API Rest. El API Gateway a su vez se comunica mediante gRPC con el primer microservicio, el cual tiene la función de listar los archivos disponibles. El microservicio de buscar un archivo se buscó ser implementado con MOM a través de RabbitMQ. Luego de varias pruebas no se logra establecer comunicación. Se crea la cola en la interfaz al ejecutar y correr el consumidor, pero no logra entrar el query enviado. 
 
-![](./imagenes/rabbit.jpg)
-
+![](Reto2/imagenes/rabbit.jpg)
 
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
