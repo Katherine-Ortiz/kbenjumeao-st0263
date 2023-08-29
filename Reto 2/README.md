@@ -59,7 +59,8 @@ Dotenv se usó para asignar variables a valores y que no sean vistos estos valor
 
 ## como se compila y ejecuta.
 
-- Se debe correr primero el servidor, para esto se ingresa a la siguiente ruta: Reto2/Grpc/src y se ejecuta el comando python server.py
+- Se debe clonar el repositorio: git clone https://github.com/Katherine-Ortiz/kbenjumeao-st0263.git
+- Después se ejecuta y corre el servidor, para esto se ingresa a la siguiente ruta: Reto2/Grpc/src y se ejecuta el comando python server.py
 - Luego se debe correr el api, para esto se ingresa a la siguiente ruta: Reto2/Gateway/src y se ejecuta el comando python app.py
 - Por último se accede a la dirección http://127.0.0.1:5000/files
 - Así el cliente puede observar la lista de archivos. En postman funciona de la misma manera y al ejecutar se obtiene lo siguiente: 
