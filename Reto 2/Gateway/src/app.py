@@ -28,7 +28,7 @@ def search_files():
             if found:
                 data = {"message": f"El archivo '{query}' esta en el microservicio con gRPC."}
             else:
-                data = {"message": f"No se ha encontrado el archivo '{query}' en el microservicio usando gRPC."}
+                data = {"message": f"No se ha encontrado el archivo '{query}' en el microservicio con gRPC."}
     response = app.response_class(
         response=json.dumps(data),
         status=200,
