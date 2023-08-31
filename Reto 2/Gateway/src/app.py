@@ -36,7 +36,7 @@ def search_files():
     )
     return response
 
-@app.route("/files")
+@app.route('/files')
 def list_files():
     with grpc.insecure_channel(f'{host_grpc}:{grpc_port}') as channel:
         list_files_client = files_pb2_grpc.FilesStub(channel)
