@@ -37,4 +37,4 @@ def list_files():
         return jsonify({"files": [file.filename for file in response.files]})
 
 if __name__ == '__main__':
-    app.run(host= host_grpc)
+    app.run(host='host_grpc')
