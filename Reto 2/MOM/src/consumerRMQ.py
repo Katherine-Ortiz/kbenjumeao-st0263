@@ -11,7 +11,7 @@ rmq_user = os.getenv('USER')
 rmq_password = os.getenv('PASSWORD')
 rmq_queue = os.getenv('QUEUE')
 
-time.sleep(10)
+time.sleep(20)
 connection = pika.BlockingConnection(pika.ConnectionParameters(host=rmq_host, 
                                                                 port=int(rmq_port),
                                                                 credentials= pika.PlainCredentials(username=rmq_user,password=rmq_password)))
