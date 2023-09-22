@@ -75,6 +75,10 @@ Cada microservicio cuenta con su archivo .env donde se encuentra la configuraci√
 
 ![](./imagenes/arbol.jpg)
 
+# Link video:
+https://eafit-my.sharepoint.com/:v:/g/personal/kbenjumeao_eafit_edu_co/EZh3_GJYv-JMo4JG1KgLFV4BdcT1wEmlLnLEVez0ty_Y4w?e=ALLI6s&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZyIsInJlZmVycmFsQXBwUGxhdGZvcm0iOiJXZWIiLCJyZWZlcnJhbE1vZGUiOiJ2aWV3In19
+
+
 # referencias:
 
 - https://www.rabbitmq.com/documentation.html 

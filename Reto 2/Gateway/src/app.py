@@ -20,8 +20,15 @@ grpc_port = os.getenv("PORT_GRPC")
 @app.route('/search-files')
 def search_files():
     query = request.args.get('query')
-    producer = producerRMQ.ArchivoMOM()
-    data = producer.call(query)
+
+    with grpc.insecure_channel(f'{host_grpc}:{grpc_port}') as channel:
+            list_files_client = files_pb2_grpc.FilesStub(channel)
+            response = list_files_client.GetFilesList(files_pb2.ListFilesRequest())
+            found = any(file.filename == query for file in response.files)
+            if found:
+                data = {"message": f"El archivo '{query}' esta en el microservicio con gRPC."}
+            else:
+                data = {"message": f"No se ha encontrado el archivo '{query}' en el microservicio con gRPC."}
     response = app.response_class(
         response=json.dumps(data),
         status=200,
@@ -29,7 +36,7 @@ def search_files():
     )
     return response
 
-@app.route("/files")
+@app.route('/files')
 def list_files():
     with grpc.insecure_channel(f'{host_grpc}:{grpc_port}') as channel:
         list_files_client = files_pb2_grpc.FilesStub(channel)
