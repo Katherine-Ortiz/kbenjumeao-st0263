@@ -8,12 +8,24 @@
 #
 # 1. breve descripción de la actividad
 #
-<texto descriptivo>
+Desplegar dos máquinas virtuales de drupal empleando contenedores. Se usa Nginx como balanceador de cargas, dos servidores adicionales tanto para la base de datos (Postgres) como para el manejo de la replicacion de datos (con NFS-SERVER).
+
 ## 1.1. Que aspectos cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
+
+1. Aplicación Drupal 1 dockerizada monolítica en varios nodos que mejore la disponibilidad de esta aplicación.
+2. Aplicación Drupal 2 dockerizada monolítica en varios nodos que mejore la disponibilidad de esta aplicación.
+2. Implementación de un balanceador de cargas basado en nginx.
+3. Tener 2 instancias de procesamiento wordpress detrás del balanceador de cargas.
+4. Tener 1 instancia de bases de datos postgres.
+5. Tener 1 instancia de archivos distribuidos en NFS.
 
 ## 1.2. Que aspectos NO cumplió o desarrolló de la actividad propuesta por el profesor (requerimientos funcionales y no funcionales)
 
+Se cumplió con todo lo necesario del reto 3.
+
 # 2. información general de diseño de alto nivel, arquitectura, patrones, mejores prácticas utilizadas.
+
+![Alt text](image.png)
 
 # 3. Descripción del ambiente de desarrollo y técnico: lenguaje de programación, librerias, paquetes, etc, con sus numeros de versiones.
 
