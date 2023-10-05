@@ -1,6 +1,9 @@
 # ST02363 Tópicos Especiales en Telemática
 
-# Estudiante: Katherine Benjumea Ortiz, kbenjumeao@eafit.edu.co
+# Estudiante: 
+# Katherine Benjumea Ortiz, kbenjumeao@eafit.edu.co
+# Brigith Lorena Giraldo Vargas, blgiraldov@eafit.edu.co
+# Valentina Ochoa Arboleda, vochoaa@eafit.edu.co
 
 # Profesor: Edwin Nelson Montoya Munera, emontoya@eafit.edu.co
 
@@ -173,6 +176,10 @@ El proyecto se realizo en 5 máquinas virtuales:
 3. Se navega por el Drupal. En caso de que no cargue, se verifica en cada máquina virtual, menos la del nfs server, que los contenedores esten arriba.
 
 ## opcionalmente - si quiere mostrar resultados o pantallazos 
+![image](https://github.com/Katherine-Ortiz/kbenjumeao-st0263/assets/74745343/61d95bc5-13a0-449a-af45-d8d65f958a4d)
+![image](https://github.com/Katherine-Ortiz/kbenjumeao-st0263/assets/74745343/d7746b43-eb76-4b68-9509-3225feae9dfc)
+![image](https://github.com/Katherine-Ortiz/kbenjumeao-st0263/assets/74745343/1e4f1deb-b6d1-4932-9bc1-8d5b0e1720e2)
+
 
 # 5. otra información que considere relevante para esta actividad.
 
